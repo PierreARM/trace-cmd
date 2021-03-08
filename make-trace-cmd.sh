@@ -28,4 +28,4 @@ if [ -z "$PREFIX" ]; then
 	PREFIX="/usr"
 fi
 
-PKG_CONFIG="pkg-config --with-path $INSTALL_PATH/usr/lib64/pkgconfig --define-variable=prefix=$INSTALL_PATH/$PREFIX" CFLAGS="-g -Wall -I$INSTALL_PATH/$PREFIX/include" make DESTDIR=$INSTALL_PATH  $O_PATH prefix=$PREFIX $@
+PKG_CONFIG="/usr/lib64/pkgconfig" CFLAGS="-g -Wall -I$INSTALL_PATH/$PREFIX/include" make DESTDIR=$INSTALL_PATH  $O_PATH prefix=$PREFIX $@
